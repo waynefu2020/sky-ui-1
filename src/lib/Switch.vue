@@ -37,6 +37,7 @@ button {
     height: $h2;
     width: $h2;
     border-radius: $h2/2;
+    transition: left 0.25s;
   }
 }
 button.checked{
