@@ -5,8 +5,8 @@
       <h1>木林森UI</h1>
       <h2>清新极简的UI框架</h2>
       <p class="actions">
-        <a href="">Github</a>
-        <a href="">开始</a>
+        <a href="https://github.com/waynefu2020/tree-ui-1">Github</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
