@@ -5,6 +5,7 @@
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
+    <span class="toggleAside"></span>
   </div>
 </template>
 
@@ -13,12 +14,11 @@ import {inject, Ref} from 'vue';
 
 export default {
   setup() {
-    const menuVisible = inject<Ref<boolean>>('xxx');
-    console.log('menuVisible:' + menuVisible.value);
-    const toggleMenu = () =>{
-      menuVisible.value = !menuVisible.value
-    }
-    return {toggleMenu}
+    const menuVisible = inject<Ref<boolean>>('menuVisible');
+    const toggleMenu = () => {
+      menuVisible.value = !menuVisible.value;
+    };
+    return {toggleMenu};
   }
 };
 </script>
@@ -43,6 +43,15 @@ export default {
 
     > li {
       margin: 0 1em;
+    }
+  }
+  > .toggleAside{}
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > .logo {
+      margin: 0 auto;
     }
   }
 }
