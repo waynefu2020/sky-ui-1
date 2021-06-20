@@ -2,6 +2,7 @@
   <button @click="toggle" :class="{checked: value}">
     <span></span>
   </button>
+  <div>{{value}}</div>
 </template>
 
 <script lang="ts">
@@ -13,7 +14,7 @@ export default {
   },
   setup(props, context){
     const toggle = () =>{
-      context.emit('input',!props.value)
+      context.emit('update:value',!props.value)
       //通知父组件，把这个pros.value取反值
     }
     return { toggle}
