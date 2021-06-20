@@ -8,15 +8,15 @@
 import {ref} from 'vue';
 
 export default {
-  props:{
+  props: {
     value: Boolean
   },
-  setup(props, context){
-    const toggle = () =>{
-      context.emit('update:value',!props.value)
+  setup(props, context) {
+    const toggle = () => {
+      context.emit('update:value', !props.value);
       //通知父组件，把这个pros.value取反值
-    }
-    return { toggle}
+    };
+    return {toggle};
   }
 };
 </script>
@@ -32,7 +32,7 @@ button {
   border-radius: $h/2;
   position: relative;
 
-  span {
+  > span {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -42,18 +42,23 @@ button {
     border-radius: $h2/2;
     transition: all 0.25s;
   }
+
+  &.checked {
+    background: #1890ff;
+
+    > span {
+      left: calc(100% - #{$h2} - 2px);
+    }
+  }
+
+  &:active {
+    > span {width: $h2 + 4px}
+  }
+
+  &.checked:active {
+    > span {width: $h2 + 4px;margin-left: -4px}
+  }
 }
-button.checked{
-  background: #1890ff;
-}
-button.checked > span {
-  left: calc(100% - #{$h2} - 2px);
-}
-button:active{
-  >span{width: $h2 + 4px}
-}
-button.checked:active{
-  >span{width: $h2 + 4px; margin-left: -4px}
-}
+
 
 </style>
