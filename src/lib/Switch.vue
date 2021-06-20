@@ -2,7 +2,6 @@
   <button @click="toggle" :class="{checked: value}">
     <span></span>
   </button>
-  <div>{{value}}</div>
 </template>
 
 <script lang="ts">
@@ -29,7 +28,7 @@ button {
   height: $h;
   width: $h*2;
   border: none;
-  background: grey;
+  background: #bfbfbf;
   border-radius: $h/2;
   position: relative;
 
@@ -41,14 +40,20 @@ button {
     height: $h2;
     width: $h2;
     border-radius: $h2/2;
-    transition: left 0.25s;
+    transition: all 0.25s;
   }
 }
 button.checked{
-  background: blue;
+  background: #1890ff;
 }
 button.checked > span {
   left: calc(100% - #{$h2} - 2px);
+}
+button:active{
+  >span{width: $h2 + 4px}
+}
+button.checked:active{
+  >span{width: $h2 + 4px; margin-left: -4px}
 }
 
 </style>
