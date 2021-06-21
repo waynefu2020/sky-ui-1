@@ -6,6 +6,7 @@ export const openDialog = (options) => {
     const div = document.createElement('div');
     document.body.appendChild(div);
     const close = () => {
+        // @ts-ignore
         app.unmount(div);
         div.remove();
     };
@@ -15,6 +16,11 @@ export const openDialog = (options) => {
                 visible: true, 'onUpdate:visible': (newVisible) => {
                     if (newVisible === false) {
                         close();
+                    }
+                },
+                closeOnClickOverlay: true, 'onUpdate:onClickOverlay':(newOverlay)=>{
+                    if(newOverlay){
+                        close()
                     }
                 },
                 ok, cancel
