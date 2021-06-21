@@ -1,5 +1,8 @@
 <template>
-  <button class="tree-button" :class="classes" :disabled="disabled">
+  <button class="tree-button"
+          :class="classes"
+          :disabled="disabled">
+    <span v-if="loading" class="tree-loadingIndicator"></span>
     <slot/>
   </button>
 </template>
@@ -21,8 +24,12 @@ export default {
       type: String,
       default: 'normal'
     },
-    disabled:{
-      type: String,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
+      type: Boolean,
       default: false
     }
   },
@@ -45,7 +52,7 @@ $h: 32px;
 $border-color: #d9d9d9;
 $radius: 4px;
 $blue: #40a9ff;
-$red: red;
+$red: #f3123e;
 $grey: grey;
 .tree-button {
   box-sizing: border-box;
@@ -66,8 +73,8 @@ $grey: grey;
   }
 
   &:hover, &:focus {
-    color: $blue;
-    border-color: $blue;
+    background: $blue;
+    color: white;
   }
 
   &:focus {
@@ -109,62 +116,95 @@ $grey: grey;
     height: 20px;
     padding: 0 4px;
   }
-  &.tree-theme-button{
-    &.tree-level-main{
+
+  &.tree-theme-button {
+    &.tree-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
-      &:hover,&:focus{
-        background: darken($blue,10%);
-        border-color: darken($blue,10%);
+
+      &:hover, &:focus {
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
       }
     }
-    &.tree-level-danger{
+
+    &.tree-level-danger {
       background: $red;
       color: white;
       border-color: $red;
-      &:hover,&:focus{
-        background: darken($red,10%);
-        border-color: darken($red,10%);
+
+      &:hover, &:focus {
+        background: darken($red, 10%);
+        border-color: darken($red, 10%);
       }
     }
   }
-  &.tree-theme-link{
-    &.tree-level-danger{
+
+  &.tree-theme-link {
+    &.tree-level-danger {
       color: $red;
-      &:hover,&:focus{
-        color: darken($red,10%);
+
+      &:hover, &:focus {
+        color: darken($red, 10%);
       }
     }
   }
-  &.tree-theme-text{
-    &.tree-level-main{
+
+  &.tree-theme-text {
+    &.tree-level-main {
       color: $blue;
-      &:hover,&:focus{
-        color: darken($blue,10%);
+
+      &:hover, &:focus {
+        color: darken($blue, 10%);
       }
     }
-    &.tree-level-danger{
+
+    &.tree-level-danger {
       color: $red;
-      &:hover,&:focus{
-        color: darken($red,10%);
+
+      &:hover, &:focus {
+        color: darken($red, 10%);
       }
     }
   }
-  &.tree-theme-button{
-    &[disabled]{
+
+  &.tree-theme-button {
+    &[disabled] {
       cursor: not-allowed;
       color: $grey;
-      &:hover{
+
+      &:hover {
         border-color: $grey;
       }
     }
   }
-  &.tree-theme-link,&.tree-theme-text{
-    &[disabled]{
+
+  &.tree-theme-link, &.tree-theme-text {
+    &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
+  }
+  > .tree-loadingIndicator {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      margin-left: 4px;
+      border-radius: 8px;
+      border-color: $blue $blue $blue transparent;
+      border-style: solid;
+      border-width: 2px;
+      animation: tree-spin 1s infinite linear;
+  }
+}
+
+@keyframes tree-spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(300deg)
   }
 }
 </style>
