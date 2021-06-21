@@ -1,20 +1,34 @@
 <template>
-    <button class="tree-button"
-      :class="{[`tree-theme-${theme}`]: theme}"
-    >
-      <slot/>
-    </button>
+  <button class="tree-button" :class="classes">
+    <slot/>
+  </button>
 </template>
 
 <script lang="ts">
+import {computed} from 'vue';
+
 export default {
-  props:{
+  props: {
     theme: {
       type: String,
       default: 'button'
+    },
+    size: {
+      type: String,
+      default: 'normal'
     }
+  },
+  setup(props){
+    const {theme,size} = props;
+    const classes = computed(()=>{
+      return {
+        [`tree-theme-${theme}`]: theme,
+        [`tree-size-${size}`]: size,
+      }
+    })
+    return {classes}
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -22,7 +36,7 @@ $h: 32px;
 $border-color: #d9d9d9;
 $radius: 4px;
 $blue: #40a9ff;
-.tree-button{
+.tree-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -35,33 +49,53 @@ $blue: #40a9ff;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
-  &+&{
+
+  & + & {
     margin-left: 8px;
   }
-  &:hover, &:focus{
+
+  &:hover, &:focus {
     color: $blue;
     border-color: $blue;
   }
-  &:focus{
+
+  &:focus {
     outline: none;
   }
+
   &::-moz-focus-inner {
     border: 0;
   }
-  &.tree-theme-link{
+
+  &.tree-theme-link {
     border: transparent;
     box-shadow: none;
     color: $blue;
-    &:hover,&:focus{
+
+    &:hover, &:focus {
       color: lighten($blue, 10%);
     }
   }
-  &.tree-theme-text{
+
+  &.tree-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
-    &:hover,&:focus{
+
+    &:hover, &:focus {
       color: darken(white, 30%);
+    }
+  }
+  &.tree-theme-button{
+    &.tree-size-big{
+      font-size: 24px;
+      height: 48px;
+      padding: 0 16px;
+    }
+    &.tree-size-small{
+      font-size: 12px;
+      height: 20px;
+      padding: 0 4px;
     }
   }
 }
