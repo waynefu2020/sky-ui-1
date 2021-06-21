@@ -16,17 +16,22 @@ export default {
     size: {
       type: String,
       default: 'normal'
+    },
+    level: {
+      type: String,
+      default: 'normal'
     }
   },
-  setup(props){
-    const {theme,size} = props;
-    const classes = computed(()=>{
+  setup(props) {
+    const {theme, size, level} = props;
+    const classes = computed(() => {
       return {
         [`tree-theme-${theme}`]: theme,
         [`tree-size-${size}`]: size,
-      }
-    })
-    return {classes}
+        [`tree-level-${level}`]: level,
+      };
+    });
+    return {classes};
   }
 };
 </script>
@@ -36,6 +41,7 @@ $h: 32px;
 $border-color: #d9d9d9;
 $radius: 4px;
 $blue: #40a9ff;
+$red: red;
 .tree-button {
   box-sizing: border-box;
   height: $h;
@@ -86,15 +92,59 @@ $blue: #40a9ff;
       color: darken(white, 30%);
     }
   }
-    &.tree-size-big{
-      font-size: 24px;
-      height: 48px;
-      padding: 0 16px;
+
+  &.tree-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  &.tree-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
+  }
+  &.tree-theme-button{
+    &.tree-level-main{
+      background: $blue;
+      color: white;
+      border-color: $blue;
+      &:hover,&:focus{
+        background: darken($blue,10%);
+        border-color: darken($blue,10%);
+      }
     }
-    &.tree-size-small{
-      font-size: 12px;
-      height: 20px;
-      padding: 0 4px;
+    &.tree-level-danger{
+      background: $red;
+      color: white;
+      border-color: $red;
+      &:hover,&:focus{
+        background: darken($red,10%);
+        border-color: darken($red,10%);
+      }
     }
+  }
+  &.tree-theme-link{
+    &.tree-level-danger{
+      color: $red;
+      &:hover,&:focus{
+        color: darken($red,10%);
+      }
+    }
+  }
+  &.tree-theme-text{
+    &.tree-level-main{
+      color: $blue;
+      &:hover,&:focus{
+        color: darken($blue,10%);
+      }
+    }
+    &.tree-level-danger{
+      color: $red;
+      &:hover,&:focus{
+        color: darken($red,10%);
+      }
+    }
+  }
 }
 </style>

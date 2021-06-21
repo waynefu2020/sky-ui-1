@@ -24,7 +24,23 @@
       <Button theme="text">按钮</Button>
       <Button size="small" theme="text">按钮</Button>
     </div>
-
+    <h1>示例3</h1>
+    <div>
+      <div>
+        <Button level="main">按钮</Button>
+        <Button>按钮</Button>
+        <Button level="danger">按钮</Button>
+      </div>
+      <div>
+        <Button level="main" theme="link">按钮</Button>
+        <Button theme="link">按钮</Button>
+        <Button level="danger" theme="link">按钮</Button>
+      </div>
+      <div>
+        <Button level="main" theme="text">按钮</Button>
+        <Button theme="text">按钮</Button>
+        <Button level="danger" theme="text">按钮</Button>
+      </div>
   </div>
 </template>
 
