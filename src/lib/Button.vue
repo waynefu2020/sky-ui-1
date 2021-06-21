@@ -86,7 +86,6 @@ $blue: #40a9ff;
       color: darken(white, 30%);
     }
   }
-  &.tree-theme-button{
     &.tree-size-big{
       font-size: 24px;
       height: 48px;
@@ -97,6 +96,5 @@ $blue: #40a9ff;
       height: 20px;
       padding: 0 4px;
     }
-  }
 }
 </style>

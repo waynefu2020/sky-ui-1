@@ -9,9 +9,22 @@
   </div>
   <h1>示例2</h1>
   <div>
-    <Button size="big">按钮</Button>
-    <Button>按钮</Button>
-    <Button size="small">按钮</Button>
+    <div>
+      <Button size="big">按钮</Button>
+      <Button>按钮</Button>
+      <Button size="small">按钮</Button>
+    </div>
+    <div>
+      <Button size="big" theme="link">按钮</Button>
+      <Button theme="link">按钮</Button>
+      <Button size="small" theme="link">按钮</Button>
+    </div>
+    <div>
+      <Button size="big" theme="text">按钮</Button>
+      <Button theme="text">按钮</Button>
+      <Button size="small" theme="text">按钮</Button>
+    </div>
+
   </div>
 </template>
 
