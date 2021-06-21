@@ -1,5 +1,5 @@
 <template>
-  <button class="tree-button" :class="classes">
+  <button class="tree-button" :class="classes" :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -20,6 +20,10 @@ export default {
     level: {
       type: String,
       default: 'normal'
+    },
+    disabled:{
+      type: String,
+      default: false
     }
   },
   setup(props) {
@@ -42,6 +46,7 @@ $border-color: #d9d9d9;
 $radius: 4px;
 $blue: #40a9ff;
 $red: red;
+$grey: grey;
 .tree-button {
   box-sizing: border-box;
   height: $h;
@@ -144,6 +149,21 @@ $red: red;
       &:hover,&:focus{
         color: darken($red,10%);
       }
+    }
+  }
+  &.tree-theme-button{
+    &[disabled]{
+      cursor: not-allowed;
+      color: $grey;
+      &:hover{
+        border-color: $grey;
+      }
+    }
+  }
+  &.tree-theme-link,&.tree-theme-text{
+    &[disabled]{
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }
