@@ -1,27 +1,36 @@
 <template>
-  <div class="tree-dialog-overlay"></div>
-  <div class="tree-dialog-wrapper">
-    <div class="tree-dialog">
-      <header>
-        标题
-        <span class="tree-dialog-close"></span>
-      </header>
-      <main>
-        <p>第一行</p>
-        <p>第二行</p>
-      </main>
-      <footer>
-        <Button level="main">OK</Button>
-        <Button>Cancel</Button>
-      </footer>
-    </div>
-  </div>
+  <template v-if="visible">
+      <div class="tree-dialog-overlay"></div>
+      <div class="tree-dialog-wrapper">
+        <div class="tree-dialog">
+          <header>
+            标题
+            <span class="tree-dialog-close"></span>
+          </header>
+          <main>
+            <p>第一行</p>
+            <p>第二行</p>
+          </main>
+          <footer>
+            <Button level="main">OK</Button>
+            <Button>Cancel</Button>
+          </footer>
+        </div>
+      </div>
+  </template>
+
 </template>
 
 <script lang="ts">
 import Button from "./Button.vue";
 export default {
-  components: {Button}
+  components: {Button},
+  props:{
+    visible:{
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
