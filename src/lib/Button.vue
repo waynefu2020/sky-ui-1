@@ -1,6 +1,6 @@
 <template>
     <button class="tree-button"
-      :class="{[`theme-${theme}`]: theme}"
+      :class="{[`tree-theme-${theme}`]: theme}"
     >
       <slot/>
     </button>
@@ -47,6 +47,22 @@ $blue: #40a9ff;
   }
   &::-moz-focus-inner {
     border: 0;
+  }
+  &.tree-theme-link{
+    border: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,&:focus{
+      color: lighten($blue, 10%);
+    }
+  }
+  &.tree-theme-text{
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &:hover,&:focus{
+      color: darken(white, 30%);
+    }
   }
 }
 </style>
