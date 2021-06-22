@@ -1,10 +1,10 @@
 <template>
   <div class="topNav">
-    <div class="logo" >
-      <svg class="icon" @click="toggleMenu">
+    <router-link to="/" class="logo" >
+      <svg class="icon">
         <use xlink:href="#icon-tree"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
@@ -47,7 +47,7 @@ $color: #0a9f98;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
   > .logo {
@@ -86,7 +86,6 @@ $color: #0a9f98;
     }
     > .toggleAside{
       display: inline-block;
-
     }
   }
 }
