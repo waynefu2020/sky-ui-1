@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>Dialog示例</div>
-    <h1>示例1</h1>
+    <h1>Dialog示例</h1>
+    <h2>示例1</h2>
       <Button @click="toggle">Toggle</Button>
       <Dialog v-model:visible="x" :close-on-click-overlay="false" :ok="f1" :cancel="f2">
         <template v-slot:content>
