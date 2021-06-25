@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Button 按钮</h1>
+    <hr>
     <p>按钮主要用于传递用户点击后触发的操作</p>
     <Demo :component="Button1Demo"/>
     <Demo :component="Button2Demo"/>
@@ -23,14 +24,28 @@
           <td>theme</td>
           <td>按钮类型</td>
           <td>String</td>
-          <td>-</td>
-          <td>false</td>
+          <td>main / default / success / danger / link / text</td>
+          <td>default</td>
+        </tr>
+        <tr>
+          <td>size</td>
+          <td>按钮大小</td>
+          <td>String</td>
+          <td>small / normal / big</td>
+          <td>normal</td>
         </tr>
         <tr>
           <td>disabled</td>
           <td>是否禁用</td>
           <td>Boolean</td>
-          <td>-</td>
+          <td>false / true</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>loading</td>
+          <td>按钮载入状态</td>
+          <td>Boolean</td>
+          <td>false / true</td>
           <td>false</td>
         </tr>
         </tbody>

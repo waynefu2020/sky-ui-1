@@ -59,7 +59,7 @@ $grey: grey;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  background: white;
+  background: #428aee;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
@@ -77,12 +77,12 @@ $grey: grey;
     border: 0;
   }
   &.tree-theme-default{
+    background: white;
     &:hover, &:focus {
       background: darken(white, 4%);
     }
   }
   &.tree-theme-main{
-    background: $blue;
     color: white;
     border-color: $blue;
 
@@ -113,6 +113,7 @@ $grey: grey;
     border: transparent;
     box-shadow: none;
     color: $blue;
+    background: transparent;
 
     &:hover, &:focus {
       color: lighten($blue, 10%);
@@ -120,6 +121,7 @@ $grey: grey;
   }
 
   &.tree-theme-text {
+    background: transparent;
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -145,7 +147,7 @@ $grey: grey;
   &.tree-size-small {
     font-size: 12px;
     height: 24px;
-    padding: 0 8px;
+    padding: 0 10px;
     background: $blue;
     color: white;
     border-color: $blue;
@@ -157,42 +159,13 @@ $grey: grey;
 
   &.tree-theme-button {
     &.tree-size-normal {
-      background: $blue;
       color: white;
       border-color: $blue;
       &:hover, &:focus {
         background: darken($blue, 10%);
         border-color: darken($blue, 10%);
       }
-    }
-  }
 
-
-  &.tree-theme-link {
-    &.tree-level-danger {
-      color: $red;
-
-      &:hover, &:focus {
-        color: darken($red, 10%);
-      }
-    }
-  }
-
-  &.tree-theme-text {
-    &.tree-level-main {
-      color: $blue;
-
-      &:hover, &:focus {
-        color: darken($blue, 10%);
-      }
-    }
-
-    &.tree-level-danger {
-      color: $red;
-
-      &:hover, &:focus {
-        color: darken($red, 10%);
-      }
     }
   }
 
@@ -201,11 +174,15 @@ $grey: grey;
       cursor: not-allowed;
       color: $disabled-font;
       background: #f7f7f7;
+      border-color: rgb(236, 236, 236);
 
       &:hover {
+        background: #f7f7f7;
+        border-color: rgb(236, 236, 236);
         cursor: not-allowed;
       }
     }
+
   }
 
   &.tree-theme-link, &.tree-theme-text {
@@ -215,16 +192,16 @@ $grey: grey;
     }
   }
   > .tree-loadingIndicator {
-      width: 14px;
-      height: 14px;
-      display: inline-block;
-      margin-left: 4px;
-      margin-right: 4px;
-      border-radius: 8px;
-      border-color: $blue $blue $blue transparent;
-      border-style: solid;
-      border-width: 2px;
-      animation: tree-spin 1s infinite linear;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: tree-spin 1s infinite linear;
   }
 }
 
