@@ -1,9 +1,11 @@
-<demo>常规使用</demo>
+<demo>基础按钮</demo>
 
 <template>
   <div>
-    <Button>按钮</Button>
-    <Button theme="button">按钮</Button>
+    <Button theme="main">主要按钮</Button>
+    <Button theme="default">次要按钮</Button>
+    <Button theme="success">成功按钮</Button>
+    <Button theme="danger">危险按钮</Button>
     <Button theme="link">链接</Button>
     <Button theme="text">文本</Button>
   </div>

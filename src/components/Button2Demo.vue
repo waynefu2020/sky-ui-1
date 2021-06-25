@@ -1,22 +1,10 @@
-<demo>不同尺寸</demo>
+<demo>按钮尺寸</demo>
 <template>
-  <div>
     <div>
-      <Button size="big">按钮</Button>
-      <Button>按钮</Button>
-      <Button size="small">按钮</Button>
+      <Button size="big">大按钮</Button>
+      <Button>正常按钮</Button>
+      <Button size="small">小按钮</Button>
     </div>
-    <div>
-      <Button size="big" theme="link">按钮</Button>
-      <Button theme="link">按钮</Button>
-      <Button size="small" theme="link">按钮</Button>
-    </div>
-    <div>
-      <Button size="big" theme="text">按钮</Button>
-      <Button theme="text">按钮</Button>
-      <Button size="small" theme="text">按钮</Button>
-    </div>
-  </div>
 </template>
 
 <script lang="ts">

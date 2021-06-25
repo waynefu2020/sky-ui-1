@@ -1,22 +1,39 @@
 <template>
-  <button class="tree-switch" @click="toggle" :class="{'tree-checked': value}">
+  <button class="tree-switch" @click="toggle" :class="classes"
+          :disabled="disabled">
     <span></span>
   </button>
 </template>
 
 <script lang="ts">
-import {ref} from 'vue';
+import {computed, ref} from 'vue';
 
 export default {
   props: {
-    value: Boolean
+    value: Boolean,
+    size: {
+      type: String,
+      default: 'normal'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
   },
   setup(props, context) {
+    const {size} = props
+    const classes = computed(()=>{
+      return {
+        [`tree-size-${size}`]: size,
+        ['tree-checked']: props.value
+      }
+    })
     const toggle = () => {
       context.emit('update:value', !props.value);
+      console.log(props.value);
       //通知父组件，把这个pros.value取反值
     };
-    return {toggle};
+    return {toggle,classes};
   }
 };
 </script>
@@ -31,7 +48,6 @@ $h2: $h - 4px;
   background: #bfbfbf;
   border-radius: $h/2;
   position: relative;
-
   > span {
     position: absolute;
     top: 2px;
@@ -42,15 +58,25 @@ $h2: $h - 4px;
     border-radius: $h2/2;
     transition: all 0.25s;
   }
-
+  &[disabled]{
+    cursor: not-allowed;
+    background: #ececec;
+    > span{background: #c9c9c9;}
+  }
   &.tree-checked {
-    background: #1890ff;
+    background: #428aee;
 
     > span {
       left: calc(100% - #{$h2} - 2px);
     }
   }
+  &.tree-size-big {
+    margin-right: 14px;
+  }
 
+  &.tree-size-small {
+    margin-left: 14px;
+  }
   &:active {
     > span {width: $h2 + 4px}
   }
@@ -59,6 +85,5 @@ $h2: $h - 4px;
     > span {width: $h2 + 4px;margin-left: -4px}
   }
 }
-
 
 </style>

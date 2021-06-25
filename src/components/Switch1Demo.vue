@@ -1,9 +1,9 @@
 <demo>
-常规用法
+基础用法
 </demo>
 
 <template>
-  <Switch v-model:value="bool"/>
+  <Switch v-model:value="checked"/>
 </template>
 
 <script lang="ts">
@@ -13,8 +13,8 @@ import {ref} from 'vue';
 export default {
   components:{Switch},
   setup(){
-    const bool = ref(false)
-    return {bool}
+    const checked = ref(false)
+    return {checked}
   }
 }
 </script>

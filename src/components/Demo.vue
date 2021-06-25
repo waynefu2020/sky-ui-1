@@ -4,8 +4,8 @@
     <div class="demo-component">
       <component :is="component"/>
     </div>
-    <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+    <div class="demo-actions" @click="toggleCode">
+      显示代码
     </div>
     <div class="demo-code" v-if="codeVisible">
         <pre class="language-html" v-html="html"/>
@@ -40,12 +40,15 @@ export default {
 
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
+$font-color:#2c405a;
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;
 
   > h2 {
-    font-size: 20px;
+    font-size: 18px;
+    color: $font-color;
+    font-weight: bold;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
   }
@@ -55,8 +58,19 @@ $border-color: #d9d9d9;
   }
 
   &-actions {
-    padding: 8px 16px;
+    font-size: 14px;
     border-top: 1px dashed $border-color;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #fafbfc;
+    color: #C5D9E8;
+
+    &:hover{
+      color: #6190e8;
+    }
   }
 
   &-code {

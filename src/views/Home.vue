@@ -3,11 +3,16 @@
     <div class="topNavAndBanner">
       <Topnav/>
       <div class="banner">
-        <h1>木林森UI</h1>
-        <h2>清新极简的UI框架</h2>
+        <h1>Sky UI</h1>
+        <h2>一款轻量级的 Vue 3 UI 组件库</h2>
         <p class="actions">
-          <a href="https://github.com/waynefu2020/tree-ui-1">Github</a>
-          <router-link to="/doc">开始</router-link>
+          <router-link to="/doc" class="start">开始使用</router-link>
+          <a href="https://github.com/waynefu2020/tree-ui-1">
+            <svg class="icon">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+            Github
+          </a>
         </p>
       </div>
     </div>
@@ -49,12 +54,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
-$radius: 4px;
+$blue: #397be9;
+$radius: 20px;
 $color: #0a9f98;
 
 .topNavAndBanner{
-  background: linear-gradient(148deg, rgba(227,255,253,1) 0%, rgba(183,233,230,1) 100%);
+  background: linear-gradient(148deg, rgba(99, 194, 254) 0%, rgba(58, 125, 234) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 .features{
@@ -107,21 +112,28 @@ $color: #0a9f98;
 
 }
   .banner{
-    color: $color;
+    color: white;
     padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    > h2{
+      font-size: 22px;
+      font-weight: lighter;
+    }
     > .actions{
       padding: 8px 0;
       a{
         margin: 0 8px;
-        background: $green;
-        color: white;
+        background: white;
+        color: $blue;
         display: inline-block;
         border-radius: $radius;
         padding: 8px 22px;
+        > svg{
+          fill: $blue;
+        }
         &:hover{
           text-decoration: none;
         }
