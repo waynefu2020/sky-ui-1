@@ -1,5 +1,5 @@
 <template>
-  <button class="tree-button"
+  <button class="sky-button"
           :class="classes"
           :disabled="disabled">
     <span v-if="loading" class="tree-loadingIndicator"></span>
@@ -50,7 +50,7 @@ $radius: 4px;
 $blue: #428aee;
 $red: #f3123e;
 $grey: grey;
-.tree-button {
+.sky-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;

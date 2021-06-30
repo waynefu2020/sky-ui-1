@@ -1,4 +1,4 @@
-import './lib/tree.scss';
+import './lib/sky.scss';
 import './index.scss';
 import {createApp} from 'vue';
 import App from './App.vue';

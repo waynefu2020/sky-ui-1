@@ -1,20 +1,6 @@
 <template>
   <div class="layout">
     <Topnav class="nav" :toggleMenuButtonVisible="true"/>
-    <div class="actions">
-      <a href="https://github.com/waynefu2020/tree-ui-1">
-        <svg class="icon">
-          <use xlink:href="#icon-github"></use>
-        </svg>
-        Github
-      </a>
-      <a href="">
-        <svg class="icon">
-          <use xlink:href="#icon-about"></use>
-        </svg>
-        关于
-      </a>
-    </div>
     <div class="content">
       <aside v-if="menuVisible">
         <h2>快速开始</h2>
@@ -73,21 +59,8 @@ $aside-index: 10;
   flex-direction: column;
   height: 90vh;
   justify-content: center;
-  flex-grow: 1;
 
-  > .actions{
-    text-align: right;
-    margin-top: 16px;
-    margin-right: 30px;
-    z-index: 20;
-    > a{
-      margin: 0 12px;
-      &:hover{
-        color: #4086ed;
-        text-decoration: none;
-      }
-    }
-  }
+
   > .nav{
     flex-shrink: 0;
     background: white;
