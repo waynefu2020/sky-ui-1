@@ -20,10 +20,7 @@
         <h2>快速开始</h2>
         <ol>
           <li>
-            <router-link to="/doc/intro">介绍</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/install">安装</router-link>
+            <router-link to="/doc/intro">关于</router-link>
           </li>
           <li>
             <router-link to="/doc/get-started">开始</router-link>
@@ -41,7 +38,10 @@
             <router-link to="/doc/dialog">Dialog 弹窗</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 选项卡</router-link>
+            <router-link to="/doc/tabs">Tabs 标签页</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/radio">Radio 单选框</router-link>
           </li>
         </ol>
       </aside>
@@ -71,13 +71,14 @@ $aside-index: 10;
 .layout{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   justify-content: center;
+  flex-grow: 1;
 
   > .actions{
     text-align: right;
     margin-top: 16px;
-    margin-right: 10px;
+    margin-right: 30px;
     z-index: 20;
     > a{
       margin: 0 12px;
@@ -95,9 +96,8 @@ $aside-index: 10;
   > .content{
     background: white;
     flex-grow: 1;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-left: 156px;
-
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -110,14 +110,14 @@ $aside-index: 10;
     }
     > main{
       flex-grow: 1;
-      padding: 0 54px;
-      height: 90vh;
+      padding: 8px 60px;
+      background: white;
     }
   }
   aside {
     background: #ddf1ff;
     width: 180px;
-    padding: 94px 0 10px 0;
+    padding: 70px 0 10px 0;
     position: fixed;
     top: 0;
     left: 0;

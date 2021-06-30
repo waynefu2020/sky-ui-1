@@ -1,9 +1,7 @@
 <template>
   <div class="topNav">
     <router-link to="/" class="logo" >
-      <svg class="icon">
-        <use xlink:href="#icon-yun"></use>
-      </svg>
+      <img src="../assets/logo.png" alt="">
     </router-link>
     <ul class="menu">
       <li>
@@ -56,9 +54,13 @@ $color: #397ce5;
     max-width: 7em;
     margin-right: auto;
     margin-left: 16px;
-    > svg{
-      width: 24px;
-      height: 24px;
+    z-index: 20;
+    >img{
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      left: 20px;
     }
   }
 
@@ -67,9 +69,8 @@ $color: #397ce5;
     white-space: nowrap;
     flex-wrap: nowrap;
 
-
     > li {
-      margin: 0 1em;
+      margin: 0 2em;
     }
   }
   > .toggleAside{
