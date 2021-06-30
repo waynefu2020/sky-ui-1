@@ -1,11 +1,12 @@
 <template>
   <div class="demo">
-    <h2>{{component.__sourceCodeTitle}}</h2>
+<!--    <h2>{{component.__sourceCodeTitle}}</h2>-->
     <div class="demo-component">
       <component :is="component"/>
     </div>
-    <div class="demo-actions" @click="toggleCode">
-      显示代码
+    <div class="demo-actions">
+      <div @click="toggleCode" v-if="codeVisible">隐藏代码</div>
+      <div @click="toggleCode" v-else>查看代码</div>
     </div>
     <div class="demo-code" v-if="codeVisible">
         <pre class="language-html" v-html="html"/>
@@ -15,7 +16,7 @@
 
 <script lang="ts">
 import 'prismjs';
-import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/themes/prism-coy.css';
 import Button from '../lib/Button.vue';
 import {computed, ref} from 'vue';
 const Prism = (window as any).Prism;

@@ -1,4 +1,4 @@
-<demo>按钮尺寸</demo>
+<demo>尺寸展示</demo>
 <template>
     <div>
       <Button size="big">大按钮</Button>

@@ -3,9 +3,6 @@
     <router-link to="/" class="logo" >
       <img src="../assets/logo.png" alt="">
     </router-link>
-    <div class="actions">
-
-    </div>
     <ul class="menu">
       <li>
         <a href="https://github.com/waynefu2020/tree-ui-1">

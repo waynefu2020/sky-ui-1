@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1>Dialog示例</h1>
+    <h1>Dialog 弹窗</h1>
     <hr>
+    <h2>基础弹窗</h2>
+    <p>弹窗可自定义标题和内容，同时有遮罩层可以打开和关闭。</p>
     <Demo :component="Dialog1Demo"/>
     <Demo :component="Dialog2Demo"/>
     <div class="dialog-attributes">
@@ -63,3 +65,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import "src/helper.scss";
+p{
+  color: $font-color;
+  margin: 10px 0;
+}
+h2{
+  font-weight: bold;
+}
+</style>

@@ -3,9 +3,17 @@
     <h1>Button 按钮</h1>
     <hr>
     <p>按钮主要用于传递用户点击后触发的操作</p>
+    <h2>基础按钮</h2>
+    <p>基础按钮分为6种：主要按钮、次要按钮、成功按钮、危险按钮、链接和文本。</p>
     <Demo :component="Button1Demo"/>
+    <h2>不同尺寸按钮</h2>
+    <p>按钮提供大、正常、小3种尺寸，可通过 size 属性配置。若不设置 size 则默认为正常按钮。</p>
     <Demo :component="Button2Demo"/>
+    <h2>不可用状态按钮</h2>
+    <p>添加 disabled 禁用按钮。</p>
     <Demo :component="Button4Demo"/>
+    <h2>加载中按钮</h2>
+    <p>可通过添加 loading 属性，使按钮处于加载中状态。</p>
     <Demo :component="Button5Demo"/>
     <div class="button-attributes">
       <h2>Button 参数</h2>
@@ -75,5 +83,9 @@ export default {
 @import "src/helper.scss";
 p{
   color: $font-color;
+  margin: 10px 0;
+}
+h2{
+  font-weight: bold;
 }
 </style>

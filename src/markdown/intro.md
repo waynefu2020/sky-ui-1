@@ -9,12 +9,14 @@ Sky UI 是一套基于 `Vue.js 3` 和 `TypeScript` 的 UI 组件库。
 本组件库主要用于个人学习交流使用。如果您想和我进行编码技巧方面的交流，推荐查看[源代码](github.com/waynefu2020/tree-ui-1) 。
 
 # 安装
-打开终端，运行如下命令：
+可以使用 `npm` 或 `yarn` 进行安装。打开终端，运行如下命令：
+
+`npm` 安装：
 ```
 npm install sky-ui
 ```
-或
+
+使用 `yarn` 安装：
 ```
 yarn add sky-ui
-
 ```

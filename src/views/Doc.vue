@@ -27,7 +27,7 @@
             <router-link to="/doc/tabs">Tabs 标签页</router-link>
           </li>
           <li>
-            <router-link to="/doc/radio">Radio 单选框</router-link>
+            <router-link to="/doc/input">Input 输入框</router-link>
           </li>
         </ol>
       </aside>
@@ -82,8 +82,11 @@ $aside-index: 10;
       flex-shrink: 0;
     }
     > main{
+      height: 100vh;
       flex-grow: 1;
-      padding: 8px 60px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 104px;
       background: white;
     }
   }

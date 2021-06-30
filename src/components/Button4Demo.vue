@@ -1,4 +1,4 @@
-<demo>不可用按钮</demo>
+<demo>不可用展示</demo>
 <template>
   <div>
     <Button disabled>禁用</Button>

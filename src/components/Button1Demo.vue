@@ -1,4 +1,4 @@
-<demo>基础按钮</demo>
+<demo>基础按钮展示</demo>
 
 <template>
   <div>
