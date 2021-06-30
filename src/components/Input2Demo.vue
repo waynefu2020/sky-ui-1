@@ -1,3 +1,4 @@
+<demo>带状态的单行输入框</demo>
 <template>
   <Input v-model="inputValue2" placeholder="success" status="success"/>
   <Input v-model="inputValue2" placeholder="error" status="error"/>

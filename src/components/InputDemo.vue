@@ -7,7 +7,7 @@
   <h2>带状态的单行输入框</h2>
   <p>可添加 success、error、warning 三种状态，表达不同含义，仅做颜色上的变化。</p>
     <Demo :component="Input2Demo"/>
-  <h2>带状态的单行输入框</h2>
+  <h2>不同尺寸输入框</h2>
   <p>支持 large、normal、small 三种尺寸，默认为 normal。可通过 size 属性设置。</p>
     <Demo :component="Input3Demo"/>
   <div class="input-attributes">

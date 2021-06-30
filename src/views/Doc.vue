@@ -86,7 +86,7 @@ $aside-index: 10;
       flex-grow: 1;
       padding-left: 60px;
       padding-right: 60px;
-      padding-top: 104px;
+      padding-top: 124px;
       background: white;
     }
   }
@@ -104,7 +104,7 @@ $aside-index: 10;
     > h2 {
       margin-bottom: 4px;
       padding: 0 16px;
-      font-size: 24px;
+      font-size: 22px;
     }
 
     > ol {

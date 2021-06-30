@@ -1,6 +1,8 @@
 <template>
-  <h1>Tabs示例</h1>
+  <h1>Tabs 标签</h1>
   <hr>
+  <h2>基本用法</h2>
+  <p>选项卡切换组件，默认选中第一项。可以自定义 Tab 标题和内容。</p>
   <Demo :component="Tabs1Demo"/>
   <div class="tabs-attributes">
     <h2>Tabs 参数</h2>
@@ -37,7 +39,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

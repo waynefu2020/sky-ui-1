@@ -1,3 +1,4 @@
+<demo>不同尺寸</demo>
 <template>
   <Input v-model="inputValue3" placeholder="大尺寸" size="large"/>
   <Input v-model="inputValue3" placeholder="正常尺寸"/>
