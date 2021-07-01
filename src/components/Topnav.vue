@@ -70,7 +70,6 @@ $color: #397ce5;
       left: 20px;
     }
   }
-
   > .menu {
     display: flex;
     white-space: nowrap;
@@ -85,8 +84,8 @@ $color: #397ce5;
     width: 28px;
     height: 28px;
     position: absolute;
-    left: 16px;
-    top: 50%;
+    left: 4%;
+    top: 90%;
     transform: translateY(-50%);
     display: none;
   }
@@ -95,10 +94,13 @@ $color: #397ce5;
       display: none;
     }
     > .logo {
-      margin: 0 auto;
+      display: none;
     }
     > .toggleAside{
       display: inline-block;
+    }
+    >.nav{
+      display: none;
     }
   }
 }

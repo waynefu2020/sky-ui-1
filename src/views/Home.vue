@@ -149,7 +149,6 @@ $color: #0a9f98;
       font-weight: lighter;
     }
     > .actions{
-      padding: 24px 0 0 0;
       a{
         margin: 0 8px;
         background: white;

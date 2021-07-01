@@ -6,14 +6,17 @@
         <h2>快速开始</h2>
         <ol>
           <li>
-            <router-link to="/doc/intro">关于</router-link>
+            <router-link to="/doc/intro">介绍</router-link>
           </li>
           <li>
-            <router-link to="/doc/get-started">开始</router-link>
+            <router-link to="/doc/get-started">快速上手</router-link>
           </li>
         </ol>
         <h2>组件</h2>
         <ol>
+          <li>
+            <router-link to="/doc/input">Input 输入框</router-link>
+          </li>
           <li>
             <router-link to="/doc/switch">Switch 开关</router-link>
           </li>
@@ -25,9 +28,6 @@
           </li>
           <li>
             <router-link to="/doc/tabs">Tabs 标签页</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/input">Input 输入框</router-link>
           </li>
         </ol>
       </aside>
@@ -91,7 +91,7 @@ $aside-index: 10;
     }
   }
   aside {
-    background: #ddf1ff;
+    background: white;
     width: 180px;
     padding: 70px 0 10px 0;
     position: fixed;
@@ -117,7 +117,7 @@ $aside-index: 10;
           text-decoration: none;
         }
         .router-link-active{
-          background: white;
+          background: #ddf1ff;
           border-left: 3px solid #0d92ff;
           border-top-right-radius: 4px;
           border-bottom-right-radius: 4px;

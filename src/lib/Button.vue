@@ -63,7 +63,14 @@ $grey: grey;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
-
+  @media (max-width: 500px) {
+    &.tree-theme-success{
+      margin: 10px;
+    }
+    &.tree-size-small {
+      margin-top: 10px;
+    }
+  }
   & + & {
     margin-left: 8px;
   }
@@ -198,7 +205,7 @@ $grey: grey;
     margin-left: 4px;
     margin-right: 4px;
     border-radius: 8px;
-    border-color: $blue $blue $blue transparent;
+    border-color: white white white transparent;
     border-style: solid;
     border-width: 2px;
     animation: tree-spin 1s infinite linear;
