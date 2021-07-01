@@ -5,7 +5,7 @@
     </router-link>
     <ul class="menu">
       <li>
-        <a href="https://github.com/waynefu2020/tree-ui-1">
+        <a href="https://github.com/waynefu2020/sky-ui-1">
           <svg class="icon">
             <use xlink:href="#icon-github"></use>
           </svg>

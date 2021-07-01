@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="tree-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="tree-dialog-wrapper">
-        <div class="tree-dialog">
+      <div class="sky-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="sky-dialog-wrapper">
+        <div class="sky-dialog">
           <header>
             <slot name="title"/>
-            <span @click="close" class="tree-dialog-close"></span>
+            <span @click="close" class="sky-dialog-close"></span>
           </header>
           <main>
             <slot name="content"/>
@@ -69,7 +69,7 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
-.tree-dialog {
+.sky-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade-out(black, 0.5);

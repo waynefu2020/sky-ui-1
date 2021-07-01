@@ -1,5 +1,5 @@
 <template>
-  <button class="tree-switch" @click="toggle" :class="classes"
+  <button class="sky-switch" @click="toggle" :class="classes"
           :disabled="disabled">
     <span></span>
   </button>
@@ -24,8 +24,8 @@ export default {
     const {size} = props
     const classes = computed(()=>{
       return {
-        [`tree-size-${size}`]: size,
-        ['tree-checked']: props.value
+        [`sky-size-${size}`]: size,
+        ['sky-checked']: props.value
       }
     })
     const toggle = () => {
@@ -41,7 +41,7 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-.tree-switch {
+.sky-switch {
   height: $h;
   width: $h*2;
   border: none;
@@ -63,25 +63,25 @@ $h2: $h - 4px;
     background: #ececec;
     > span{background: #c9c9c9;}
   }
-  &.tree-checked {
+  &.sky-checked {
     background: #428aee;
 
     > span {
       left: calc(100% - #{$h2} - 2px);
     }
   }
-  &.tree-size-big {
+  &.sky-size-big {
     margin-right: 14px;
   }
 
-  &.tree-size-small {
+  &.sky-size-small {
     margin-left: 14px;
   }
   &:active {
     > span {width: $h2 + 4px}
   }
 
-  &.tree-checked:active {
+  &.sky-checked:active {
     > span {width: $h2 + 4px;margin-left: -4px}
   }
 }
