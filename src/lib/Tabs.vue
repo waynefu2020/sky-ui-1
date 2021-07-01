@@ -1,15 +1,15 @@
 <template>
-  <div class="tree-tabs">
-    <div class="tree-tabs-nav" ref="container">
-      <div class="tree-tabs-nav-item"
+  <div class="sky-tabs">
+    <div class="sky-tabs-nav" ref="container">
+      <div class="sky-tabs-nav-item"
            v-for="(t, index) in titles"
            :ref="element => { if( t === selected) selectedItem = element }"
            :class="{selected: t === selected}"
            @click="select(t)" :key="index">{{ t }}
       </div>
-      <div class="tree-tabs-nav-indicator" ref="indicator"></div>
+      <div class="sky-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="tree-tabs-content">
+    <div class="sky-tabs-content">
       <component :is="current" :key="current.props.title"/>
     </div>
   </div>
@@ -67,7 +67,7 @@ $blue: #428aee;
 $color: #333;
 $border-color: #d9d9d9;
 
-.tree-tabs {
+.sky-tabs {
 
   &-nav {
     display: flex;
