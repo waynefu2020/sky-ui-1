@@ -2,7 +2,7 @@
   <button class="sky-button"
           :class="classes"
           :disabled="disabled">
-    <span v-if="loading" class="tree-loadingIndicator"></span>
+    <span v-if="loading" class="sky-loadingIndicator"></span>
     <slot/>
   </button>
 </template>
@@ -33,8 +33,8 @@ export default {
     const {theme, size, level} = props;
     const classes = computed(() => {
       return {
-        [`tree-theme-${theme}`]: theme,
-        [`tree-size-${size}`]: size,
+        [`sky-theme-${theme}`]: theme,
+        [`sky-size-${size}`]: size,
       };
     });
     return {classes};
@@ -64,10 +64,10 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   @media (max-width: 500px) {
-    &.tree-theme-success{
+    &.sky-theme-success{
       margin: 10px;
     }
-    &.tree-size-small {
+    &.sky-size-small {
       margin-top: 10px;
     }
   }
@@ -83,13 +83,13 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.tree-theme-default{
+  &.sky-theme-default{
     background: white;
     &:hover, &:focus {
       background: darken(white, 4%);
     }
   }
-  &.tree-theme-main{
+  &.sky-theme-main{
     color: white;
     border-color: $blue;
 
@@ -98,7 +98,7 @@ $grey: grey;
       border-color: darken($blue, 10%);
     }
   }
-  &.tree-theme-success{
+  &.sky-theme-success{
     background: #13ce66;
     border-color: #13ce66;
     color: white;
@@ -106,7 +106,7 @@ $grey: grey;
       background: lighten(#13ce66, 2%);
     }
   }
-  &.tree-theme-danger {
+  &.sky-theme-danger {
     background: $red;
     color: white;
     border-color: $red;
@@ -116,7 +116,7 @@ $grey: grey;
       border-color: darken($red, 10%);
     }
   }
-  &.tree-theme-link {
+  &.sky-theme-link {
     border: transparent;
     box-shadow: none;
     color: $blue;
@@ -127,7 +127,7 @@ $grey: grey;
     }
   }
 
-  &.tree-theme-text {
+  &.sky-theme-text {
     background: transparent;
     border-color: transparent;
     box-shadow: none;
@@ -138,7 +138,7 @@ $grey: grey;
     }
   }
 
-  &.tree-size-big {
+  &.sky-size-big {
     font-size: 20px;
     height: 42px;
     padding: 0 16px;
@@ -151,7 +151,7 @@ $grey: grey;
     }
   }
 
-  &.tree-size-small {
+  &.sky-size-small {
     font-size: 12px;
     height: 24px;
     padding: 0 10px;
@@ -164,8 +164,8 @@ $grey: grey;
     }
   }
 
-  &.tree-theme-button {
-    &.tree-size-normal {
+  &.sky-theme-button {
+    &.sky-size-normal {
       color: white;
       border-color: $blue;
       &:hover, &:focus {
@@ -176,7 +176,7 @@ $grey: grey;
     }
   }
 
-  &.tree-theme-button {
+  &.sky-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $disabled-font;
@@ -192,13 +192,13 @@ $grey: grey;
 
   }
 
-  &.tree-theme-link, &.tree-theme-text {
+  &.sky-theme-link, &.sky-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $disabled-font;
     }
   }
-  > .tree-loadingIndicator {
+  > .sky-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
