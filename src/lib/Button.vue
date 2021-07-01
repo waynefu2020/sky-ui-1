@@ -208,11 +208,11 @@ $grey: grey;
     border-color: white white white transparent;
     border-style: solid;
     border-width: 2px;
-    animation: tree-spin 1s infinite linear;
+    animation: sky-spin 1s infinite linear;
   }
 }
 
-@keyframes tree-spin {
+@keyframes sky-spin {
   0% {
     transform: rotate(0deg)
   }

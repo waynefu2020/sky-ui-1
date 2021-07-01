@@ -7,7 +7,7 @@
         <h2>一款轻量级的 Vue 3 UI 组件库</h2>
         <p class="actions">
           <router-link to="/doc" class="start">开始使用</router-link>
-          <a href="https://github.com/waynefu2020/tree-ui-1">
+          <a href="https://github.com/waynefu2020/sky-ui-1">
             <svg class="icon">
               <use xlink:href="#icon-github"></use>
             </svg>
