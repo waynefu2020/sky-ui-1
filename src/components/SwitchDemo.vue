@@ -3,7 +3,11 @@
     <h1>Switch 开关</h1>
     <hr>
     <p>开关用于表示两种状态之间的切换，switch 更多用于触发后即可改变状态。</p>
+    <h2>基础用法</h2>
+    <p>状态切换会触发事件。</p>
     <Demo :component="Switch1Demo"/>
+    <h2>不可用开关</h2>
+    <p>添加属性 disabled 禁用开关按钮。</p>
     <Demo :component="Switch2Demo"/>
     <div class="switch-attributes">
       <h2>Switch 参数</h2>
@@ -22,7 +26,7 @@
             <td>value</td>
             <td>Switch 状态</td>
             <td>Boolean</td>
-            <td>-</td>
+            <td>false / true</td>
             <td>false</td>
           </tr>
           <tr>
